@@ -17,16 +17,18 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css?v=2') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css?v=4') }}" rel="stylesheet">
 </head>
 <body class="bg-grey-light">
     <div id="app">
         <nav class="bg-white">
             <div class="container mx-auto">
-                <div class="flex justify-between items-center py-3">
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
-                    </a>
+                <div class="flex justify-between items-center py-2">
+                    <h3>
+                        <a class="navbar-brand" href="{{ url('/') }}">
+                            AcuBoard
+                        </a>
+                    </h3>
                     
                     <div>
                         <!-- Right Side Of Navbar -->
