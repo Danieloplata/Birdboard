@@ -21,14 +21,14 @@
 </head>
 <body class="bg-grey-light">
     <div id="app">
-        <nav class="bg-white">
+        <nav class="bg-white section">
             <div class="container mx-auto">
-                <div class="flex justify-between items-center py-2">
-                    <h3>
-                        <a class="navbar-brand" href="{{ url('/') }}">
-                            AcuBoard
+                <div class="flex justify-between items-center py-1">
+                    <h1>
+                        <a class="navbar-brand" href="{{ url('/projects') }}">
+                            <img src="/images/logo.svg" alt="Birdboard" class="relative" style="top: 2px">
                         </a>
-                    </h3>
+                    </h1>
                     
                     <div>
                         <!-- Right Side Of Navbar -->
