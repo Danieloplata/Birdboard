@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 use App\Project;
+use Facades\Tests\Setup\ProjectFactory;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -20,6 +21,9 @@ class ManageProjectsTest extends TestCase
             ->assertRedirect('login');
 
         $this->get('/projects/create')
+            ->assertRedirect('login');
+
+        $this->get($project->path().'/edit')
             ->assertRedirect('login');
 
         $this->get($project->path())
@@ -49,8 +53,6 @@ class ManageProjectsTest extends TestCase
 
         $response->assertRedirect($project->path());
 
-        $this->assertDatabaseHas('projects', $attributes);
-
         $this->get($project->path())
             ->assertSee($attributes['title'])
             ->assertSee($attributes['description'])
@@ -60,29 +62,30 @@ class ManageProjectsTest extends TestCase
     /** @test */
     public function a_user_can_update_a_project()
     {
-        $this->signIn();
-        
-        //$this->withoutExceptionHandling();
+        $project = ProjectFactory::create();
 
-        $project = factory('App\Project')->create(['owner_id' => auth()->id()]);
-
-        $this->patch($project->path(), [
+        $attributes = [
+            'title' => 'Changed',
+            'description' => 'Changed',
             'notes' => 'Changed'
-        ])->assertRedirect($project->path());
+        ];
 
-        $this->assertDatabaseHas('projects', ['notes' => 'Changed']);
+        $this->actingAs($project->owner)
+            ->patch($project->path(), $attributes)
+            ->assertRedirect($project->path());
+
+        $this->get($project->path().'/edit')->assertOk();
+
+        $this->assertDatabaseHas('projects', $attributes);
     }
 
     /** @test */
     public function a_user_can_view_their_project()
     {
-        $this->signIn();
-        
-        //$this->withoutExceptionHandling();
+        $project = ProjectFactory::create();
 
-        $project = factory('App\Project')->create(['owner_id' => auth()->id()]);
-
-        $this->get($project->path())
+        $this->actingAs($project->owner)
+            ->get($project->path())
             ->assertSee($project->title)
             ->assertSee($project->description);
     }
@@ -92,8 +95,6 @@ class ManageProjectsTest extends TestCase
     {
         $this->signIn();
         
-        //$this->withoutExceptionHandling();
-
         $project = factory('App\Project')->create();
 
         $this->get($project->path())
@@ -107,7 +108,7 @@ class ManageProjectsTest extends TestCase
 
         $project = factory('App\Project')->create();
 
-        $this->patch($project->path(), [])
+        $this->patch($project->path())
             ->assertStatus(403);
     }
 
