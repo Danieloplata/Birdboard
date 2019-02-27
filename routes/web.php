@@ -1,11 +1,11 @@
 <?php
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect(route('Projects'));
 });
 
 Route::group(['middleware' => 'auth'], function () {
-	Route::get('/projects', 'ProjectsController@index');
+	Route::get('/projects', 'ProjectsController@index')->name('Projects');
 	Route::get('/projects/create', 'ProjectsController@create');
 	Route::get('/projects/{project}', 'ProjectsController@show');
 	Route::get('/projects/{project}/edit', 'ProjectsController@edit');
@@ -19,5 +19,3 @@ Route::group(['middleware' => 'auth'], function () {
 });
 
 Auth::routes();
-
-
