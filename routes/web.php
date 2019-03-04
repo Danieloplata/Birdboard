@@ -1,5 +1,11 @@
 <?php
 
+\App\Project::created(function ($project) {
+    \App\Activity::create([
+        'project_id' => $project->id;
+    ])
+})
+
 Route::get('/', function () {
     return redirect(route('Projects'));
 });
