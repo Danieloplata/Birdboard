@@ -8,12 +8,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3c52a99d-e0f7-4900-830f-e4b9c08c8da4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9814fdd0-01b8-4cf7-810b-a16fb006b0ff.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9814fdd0-01b8-4cf7-810b-a16fb006b0ff.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Activity.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Activity.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_02_28_153545_create_activities_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_02_28_153545_create_activities_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProjectTasksController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProjectTasksController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Observers/ProjectObserver.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Observers/ProjectObserver.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Project.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Project.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Task.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Task.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/TaskFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/TaskFactory.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Feature/ActivityFeedTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ActivityFeedTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/TaskTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/TaskTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -73,14 +76,68 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Observers/ProjectObserver.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+            <state relative-caret-position="465">
+              <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/Feature/ActivityFeedTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="397">
+              <caret line="55" column="38" selection-start-line="55" selection-start-column="38" selection-end-line="55" selection-end-column="38" />
               <folding>
-                <element signature="e#33#49#0#PHP" expanded="true" />
+                <element signature="e#33#72#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Project.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="335">
+              <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Task.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="310">
+              <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/factories/TaskFactory.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="217">
+              <caret line="7" column="53" selection-start-line="7" selection-start-column="53" selection-end-line="7" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProjectTasksController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="583">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/Unit/TaskTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="335">
+              <caret line="36" selection-start-line="36" selection-end-line="36" />
             </state>
           </provider>
         </entry>
@@ -97,18 +154,21 @@
         <option value="$PROJECT_DIR$/phpunit.xml" />
         <option value="$PROJECT_DIR$/database/migrations/2019_01_04_094245_create_projects_table.php" />
         <option value="$PROJECT_DIR$/tests/Feature/ProjectsTest.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ProjectTasksController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/resources/views/projects/show.blade.php" />
         <option value="$PROJECT_DIR$/tests/Feature/ManageProjectsTest.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" />
-        <option value="$PROJECT_DIR$/app/Project.php" />
         <option value="$PROJECT_DIR$/app/Activity.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_02_28_153545_create_activities_table.php" />
-        <option value="$PROJECT_DIR$/tests/Feature/ActivityFeedTest.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
+        <option value="$PROJECT_DIR$/tests/Feature/ActivityFeedTest.php" />
+        <option value="$PROJECT_DIR$/app/Project.php" />
         <option value="$PROJECT_DIR$/app/Observers/ProjectObserver.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ProjectTasksController.php" />
+        <option value="$PROJECT_DIR$/tests/Unit/TaskTest.php" />
+        <option value="$PROJECT_DIR$/database/factories/TaskFactory.php" />
+        <option value="$PROJECT_DIR$/app/Task.php" />
       </list>
     </option>
   </component>
@@ -291,6 +351,12 @@
               <item name="tests" type="462c0819:PsiDirectoryNode" />
               <item name="Setup" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="acuboard" type="b2602c69:ProjectViewProjectNode" />
+              <item name="acuboard" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="Unit" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -365,44 +431,44 @@
       <workItem from="1550834270666" duration="20000" />
       <workItem from="1550834324188" duration="667000" />
       <workItem from="1550847327022" duration="2237000" />
-      <workItem from="1551192999995" duration="13119000" />
+      <workItem from="1551192999995" duration="16849000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="tests - 2019.03.04 at 11h 35m 27s.xml">
+    <history-entry file="tests - 2019.03.05 at 11h 35m 08s.xml">
       <configuration name="tests" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="tests - 2019.03.04 at 12h 08m 40s.xml">
+    <history-entry file="tests - 2019.03.05 at 11h 36m 14s.xml">
       <configuration name="tests" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="tests - 2019.03.04 at 12h 09m 30s.xml">
+    <history-entry file="tests - 2019.03.05 at 11h 36m 35s.xml">
       <configuration name="tests" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="tests - 2019.03.04 at 12h 09m 37s.xml">
+    <history-entry file="tests - 2019.03.05 at 11h 37m 03s.xml">
       <configuration name="tests" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="tests - 2019.03.04 at 12h 09m 48s.xml">
+    <history-entry file="tests - 2019.03.05 at 11h 37m 26s.xml">
       <configuration name="tests" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="tests - 2019.03.04 at 12h 09m 57s.xml">
+    <history-entry file="tests - 2019.03.05 at 11h 38m 27s.xml">
       <configuration name="tests" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="tests - 2019.03.04 at 12h 10m 29s.xml">
+    <history-entry file="tests - 2019.03.05 at 11h 38m 39s.xml">
       <configuration name="tests" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="tests - 2019.03.04 at 12h 11m 07s.xml">
+    <history-entry file="tests - 2019.03.05 at 11h 39m 48s.xml">
       <configuration name="tests" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="tests - 2019.03.04 at 12h 11m 18s.xml">
+    <history-entry file="tests - 2019.03.05 at 11h 39m 53s.xml">
       <configuration name="tests" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="tests - 2019.03.04 at 12h 11m 23s.xml">
+    <history-entry file="tests - 2019.03.05 at 11h 40m 10s.xml">
       <configuration name="tests" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26456000" />
+    <option name="totallyTimeSpent" value="30186000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -528,13 +594,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProjectTasksController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-99">
@@ -618,30 +677,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Project.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="27" column="55" lean-forward="true" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/Feature/ActivityFeedTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="39" />
+        <state relative-caret-position="397">
+          <caret line="55" column="38" selection-start-line="55" selection-start-column="38" selection-end-line="55" selection-end-column="38" />
           <folding>
             <element signature="e#33#72#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Project.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Observers/ProjectObserver.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
-          <folding>
-            <element signature="e#33#49#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="465">
+          <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Unit/TaskTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/factories/TaskFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="7" column="53" selection-start-line="7" selection-start-column="53" selection-end-line="7" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Task.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProjectTasksController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="583">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
