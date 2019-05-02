@@ -14,15 +14,6 @@ class Task extends Model
         'completed' => 'boolean'
     ];
 
-    protected static function boot()
-    {
-        parent::boot();
-
-        static::created(function ($task) {
-            $task->project->recordActivity('created_task');
-        });
-    }
-
     public function complete()
     {
         $this->update(['completed' => true]);
@@ -45,6 +36,19 @@ class Task extends Model
     public function path()
     {
     	return "/projects/{$this->project->id}/tasks/{$this->id}";
+    }
+
+    public function recordActivity($description)
+    {
+        $this->activity()->create([
+            'project_id' => $this->project->id,
+            'description' => $description
+        ]);
+    }
+
+    public function activity()
+    {
+        return $this->morphMany(Activity::class, 'subject')->latest();
     }
 
 }

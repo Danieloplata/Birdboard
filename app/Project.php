@@ -28,13 +28,22 @@ class Project extends Model
 		return $this->tasks()->create(compact('body'));
 	}
 
+    /**
+     * Record activity for a project.
+     *
+     * @param string $description
+     */
     public function recordActivity($description)
     {
         $this->activity()->create(compact('description'));
     }
-
+    /**
+     * The activity feed for the project.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function activity()
     {
-        return $this->hasMany(Activity::class);
+        return $this->hasMany(Activity::class)->latest();
     }
 }
