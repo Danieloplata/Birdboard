@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
 {
+    use RecordsActivity;
+
 	protected $guarded = [];
 
 	public function path()
@@ -28,15 +30,6 @@ class Project extends Model
 		return $this->tasks()->create(compact('body'));
 	}
 
-    /**
-     * Record activity for a project.
-     *
-     * @param string $description
-     */
-    public function recordActivity($description)
-    {
-        $this->activity()->create(compact('description'));
-    }
     /**
      * The activity feed for the project.
      *
