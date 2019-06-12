@@ -4,6 +4,7 @@ namespace Tests\Feature;
 
 use App\Project;
 use Facades\Tests\Setup\ProjectFactory;
+use Illuminate\Auth\AuthenticationException;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -36,6 +37,8 @@ class ManageProjectsTest extends TestCase
     /** @test */
     public function a_user_can_create_a_project()
     {
+        $this->withoutExceptionHandling();
+
         $this->signIn();
 
         $this->get('/projects/create')
@@ -60,29 +63,40 @@ class ManageProjectsTest extends TestCase
     }
 
     /** @test */
-    public function a_user_can_delete_a_project()
+    public function a_user_can_see_all_projects_they_have_been_invited_to_on_their_dashboard()
     {
+        $user = $this->signIn();
+
+        $project = tap(ProjectFactory::create())->invite($user);
+
+        $this->get(route('projects.index'))
+            ->assertSee($project->title);
+    }
+
+    /** @test */
+    public function unauthorised_users_cannot_delete_projects()
+    {
+        $project = ProjectFactory::create();
+
+        $this->delete($project->path())
+            ->assertRedirect('/login');
+
         $this->signIn();
 
-        $this->get('/projects/create')
-            ->assertStatus(200);
+        $this->delete($project->path())
+            ->assertStatus(403);
+    }
 
-        $attributes = [
-            'title' => $this->faker->sentence,
-            'description' => $this->faker->sentence,
-            'notes' => 'General notes here.'
-        ];
+    /** @test */
+    public function a_user_can_delete_a_project()
+    {
+        $project = ProjectFactory::create();
 
-        $response = $this->post('/projects', $attributes);
+        $this->actingAs($project->owner)
+            ->delete($project->path())
+            ->assertRedirect('/projects');
 
-        $project = Project::where($attributes)->first();
-
-        $response->assertRedirect($project->path());
-
-        $this->get($project->path())
-            ->assertSee($attributes['title'])
-            ->assertSee($attributes['description'])
-            ->assertSee($attributes['notes']);
+        $this->assertDatabaseMissing('projects', $project->only('id'));
     }
 
     /** @test */

@@ -31,6 +31,21 @@ class Project extends Model
 	}
 
     /**
+     * Invite a user to the project.
+     *
+     * @param \App\User $user
+     */
+    public function invite(User $user)
+    {
+        $this->members()->attach($user);
+    }
+
+    public function members()
+    {
+        return $this->belongsToMany(User::class, 'project_members')->withTimestamps();
+    }
+
+    /**
      * The activity feed for the project.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
