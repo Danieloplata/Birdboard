@@ -12,21 +12,32 @@ class InvitationsTest extends TestCase
     use RefreshDatabase;
 
     /** @test */
-    function a_project_may_invite_a_user()
+    function non_owners_may_not_invite_users()
+    {
+        $this->actingAs(factory(User::class)->create())
+            ->post(ProjectFactory::create()->path() . '/invitations')
+            ->assertStatus(403);
+
+    }
+
+    /** @test */
+    function a_project_owner_may_invite_a_user()
     {
         $project = ProjectFactory::create();
 
         $userToInvite = factory(User::class)->create();
 
-        $this->actingAs($project->owner)->post($project->path() . '/invitations', [
-            'email' => $userToInvite->email
-        ]);
+        $this->actingAs($project->owner)
+            ->post($project->path() . '/invitations', [
+                'email' => $userToInvite->email
+            ])
+            ->assertRedirect($project->path());
 
         $this->assertTrue($project->members->contains($userToInvite));
     }
 
     /** @test */
-    function the_invited_email_must_be_associated_with_a_valid_account()
+    function the_email_must_be_associated_with_a_valid_account()
     {
         $project = ProjectFactory::create();
 
@@ -34,7 +45,7 @@ class InvitationsTest extends TestCase
             'email' => 'invalidemail@example.org'
         ])
         ->assertSessionHasErrors([
-            'email' => 'The user you are inviting must have a account'
+            'email' => 'The user you are inviting must have an account'
         ]);
     }
 
