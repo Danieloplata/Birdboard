@@ -9,21 +9,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3c52a99d-e0f7-4900-830f-e4b9c08c8da4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/projects/invite.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/birdboard.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/birdboard.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9814fdd0-01b8-4cf7-810b-a16fb006b0ff.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9814fdd0-01b8-4cf7-810b-a16fb006b0ff.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/components/button.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/components/card.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/components/dropdown.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/themes/dark.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/themes/light.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/ProjectInvitationRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/ProjectInvitationRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Policies/ProjectPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Policies/ProjectPolicy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/ProjectFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ProjectFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/errors.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/errors.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/_variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/projects/activity/card.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/activity/card.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/projects/card.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/card.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/projects/invite.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/invite.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/projects/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/InvitationsTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/InvitationsTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/ManageProjectsTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ManageProjectsTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -286,7 +287,7 @@
       <workItem from="1571829778530" duration="148000" />
       <workItem from="1572959240457" duration="1808000" />
       <workItem from="1573125882083" duration="1801000" />
-      <workItem from="1580830672436" duration="8931000" />
+      <workItem from="1580830672436" duration="10825000" />
     </task>
     <servers />
   </component>
@@ -320,22 +321,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="701" y="117" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580991773359" />
-    <state width="964" height="282" key="GridCell.Tab.0.bottom" timestamp="1580993574932">
+    <state width="964" height="282" key="GridCell.Tab.0.bottom" timestamp="1581013652101">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="964" height="282" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580993574932" />
-    <state width="964" height="282" key="GridCell.Tab.0.center" timestamp="1580993574932">
+    <state width="964" height="282" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1581013652101" />
+    <state width="964" height="282" key="GridCell.Tab.0.center" timestamp="1581013652100">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="964" height="282" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580993574932" />
-    <state width="964" height="282" key="GridCell.Tab.0.left" timestamp="1580993574932">
+    <state width="964" height="282" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1581013652100" />
+    <state width="964" height="282" key="GridCell.Tab.0.left" timestamp="1581013652100">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="964" height="282" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580993574932" />
-    <state width="964" height="282" key="GridCell.Tab.0.right" timestamp="1580993574932">
+    <state width="964" height="282" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1581013652100" />
+    <state width="964" height="282" key="GridCell.Tab.0.right" timestamp="1581013652101">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="964" height="282" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580993574932" />
+    <state width="964" height="282" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1581013652101" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1580993032136">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -19,69 +19,66 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body class="bg-grey-lighter">
-<div id="app">
-    <nav class="bg-white section">
-        <div class="container mx-auto">
-            <div class="flex justify-between items-center py-1">
-                <h1>
-                    <a class="navbar-brand" href="{{ route('projects.index') }}">
-                        <img src="/images/logo.svg" alt="AcuBoard" class="relative" style="top: 2px">
-                    </a>
-                </h1>
+<body class="theme-light bg-page">
+    <div id="app">
+        <nav class="bg-header section">
+            <div class="container mx-auto">
+                <div class="flex justify-between items-center py-1">
+                    <h1>
+                        <a class="navbar-brand" href="{{ route('projects.index') }}">
+                            <img src="/images/logo.svg" alt="AcuBoard" class="relative" style="top: 2px">
+                        </a>
+                    </h1>
 
-                <div>
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto list-reset">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a
-                                    id="navbarDropdown"
-                                    class="nav-link dropdown-toggle"
-                                    href="#" role="button"
-                                    data-toggle="dropdown"
-                                    aria-haspopup="true"
-                                    aria-expanded="false"
-                                    v-pre
-                                >
-                                    <img width="50"
-                                         class="rounded-full"
-                                         src="https://www.gravatar.com/avatar/{{ md5(auth()->user()->email) }}?s=200">
-                                </a>
+                    <div>
+                        <!-- Right Side Of Navbar -->
+                        <div class="flex items-center ml-auto">
+                            <!-- Authentication Links -->
+                            @guest
+                                <a class="text-accent mr-4 no-underline hover:underline" href="{{ route('login') }}">{{ __('Login') }}</a>
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item"
-                                       href="{{ route('logout') }}"
-                                       onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
+                                @if (Route::has('register'))
+                                    <a class="text-accent no-underline hover:underline" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                @endif
+                            @else
+                                <li class="nav-item dropdown">
+                                    <a
+                                        id="navbarDropdown"
+                                        class="nav-link dropdown-toggle"
+                                        href="#" role="button"
+                                        data-toggle="dropdown"
+                                        aria-haspopup="true"
+                                        aria-expanded="false"
+                                        v-pre
                                     >
-                                        {{ __('Logout') }}
+                                        <img width="50"
+                                             class="rounded-full"
+                                             src="https://www.gravatar.com/avatar/{{ md5(auth()->user()->email) }}?s=200">
                                     </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item"
+                                           href="{{ route('logout') }}"
+                                           onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
+                                        >
+                                            {{ __('Logout') }}
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            @csrf
+                                        </form>
+                                    </div>
+                                </li>
+                            @endguest
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
-    <main class="container mx-auto py-6 section">
-        @yield('content')
-    </main>
-</div>
+        <main class="container mx-auto py-6 section">
+            @yield('content')
+        </main>
+    </div>
 </body>
 </html>
