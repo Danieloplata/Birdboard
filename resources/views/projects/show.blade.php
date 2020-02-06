@@ -41,7 +41,7 @@
 									<input name="completed" type="checkbox" onchange="this.form.submit()" {{ $task->completed ? "checked" : '' }}>
 								</div>
 							</form>
-						</div>						
+						</div>
 					@endforeach
 
 					<div class="card mb-3">
@@ -51,7 +51,7 @@
 						</form>
 					</div>
 				</div>
-				
+
 				<div>
 					<h2 class="text-lg text-grey font-normal mb-3">General notes</h2>
 					<form method="POST" action="{{ $project->path() }}">
@@ -71,8 +71,10 @@
 
 			<div class="lg:w-1/4 px-3 lg:py-8">
 				@include('projects.card')
-
                 @include('projects.activity.card')
+                @can('manage', $project)
+                    @include('projects.invite')
+                @endcan
 			</div>
 		</div>
 	</main>
