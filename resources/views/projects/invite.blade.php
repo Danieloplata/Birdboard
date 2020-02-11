@@ -3,10 +3,10 @@
         Invite a user
     </h3>
 
-    <form method="POST" action="{{ $project->path() . 'invitations' }}">
+    <form method="POST" action="{{ $project->path() . '/invitations' }}">
         @csrf
         <div class="mb-3">
-            <input type="email" name="" id="" class="border-muted border rounded w-full py-2 px-3" placeholder="Email address">
+            <input type="email" name="email" id="" class="border-muted border rounded w-full py-2 px-3" placeholder="Email address">
         </div>
 
         <button type="submit" class="button">Invite</button>
